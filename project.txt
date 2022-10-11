@@ -1,0 +1,37 @@
+class HW1 {
+    public static void main(String[] args) {
+        System.out.println("Кофе-машина");
+        SimpleDateFormat format = new SimpleDateFormat("yyyy.MM.dd_HH:mm:ss");
+
+        Scanner sc = new Scanner(System.in);
+
+        int moneyAmount = sc.nextInt();
+        int[] drinkPrices = {20, 80, 150, 40};
+
+        String[] drinkNames = {"воду", "эспрессо", "капучино", "молоко"};
+
+        for (int i = 0; i < drinkNames.length; i = i + 1) {
+            if (drinkPrices[i] <= moneyAmount) {
+                System.out.println("Вы можете купить " + drinkNames[i]);
+
+            } else {
+                System.out.println("Вы не можете купить " + drinkNames[i]);
+            }
+
+        }
+        System.out.println(format.format(new Date()));
+
+             screen();
+    }
+        public static void screen (){
+            {
+
+                Dimension size = Toolkit.getDefaultToolkit().getScreenSize();
+
+                int width = (int) size.getWidth();
+                int height = (int) size.getHeight();
+
+                System.out.println(width + " x " + height);
+            }
+        }
+}
